@@ -1,0 +1,31 @@
+using System;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Intrinsics.X86;
+
+namespace CHharp;
+class Program {
+static void Main() {
+
+int [] k = {1,2,3,20};
+
+short l = 7;
+short n = 5;
+short m = 10;
+
+//Формула
+for (int i = 0; i < k.Length; i++) {
+    int s = (2*l + 2*n)*k[i] + (k[i]*k[i] + k[i])*m ;
+    System.Console.WriteLine(k[i] + ": " + s);
+}
+
+System.Console.WriteLine();
+
+//Цикл
+for (int i = 0; i < k.Length; i++) {
+    int ss = 0;
+    for (int j = 0; j < k[i]; j++) {
+        ss += 2*l + 2*(m*j) + 2*(n + m);
+    }
+    System.Console.WriteLine(k[i] + ": " + ss);
+}
