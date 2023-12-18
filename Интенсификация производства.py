@@ -1,4 +1,4 @@
-def days_of_monthes(n):
+def daysOfmonthes(n):
     if (n == 1): return 31
     if (n == 2): return 28
     if (n == 3): return 31
@@ -16,8 +16,8 @@ d1, m1, y1 = [int(x) for x in input().split('.')]
 d2, m2, y2 = [int(x) for x in input().split('.')]
 p = int(input())
 
-fd = (y1 - 1) * 365 + sum([days_of_monthes(x) for x in range(1, m1)]) + d1
-sd = (y2 - 1) * 365 + sum([days_of_monthes(x) for x in range(1, m2)]) + d2
+fd = (y1 - 1) * 365 + sum([daysOfmonthes(x) for x in range(1, m1)]) + d1
+sd = (y2 - 1) * 365 + sum([daysOfmonthes(x) for x in range(1, m2)]) + d2
 
 vis = len([x for x in range(y1, y2 + 1) if x % 4 == 0])
 if (y1 % 4 == 0 and m1 > 2): vis -= 1
