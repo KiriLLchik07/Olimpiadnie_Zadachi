@@ -32,4 +32,4 @@ for i in unluckyNumbers2:
     for j in range(0, len(endMoney)):
         if endMoney[j] >= i: endMoney[j] += 1
 
-print(" ".join(str(i) for i in endMoney))
+print("  ".join(str(i) for i in endMoney))
