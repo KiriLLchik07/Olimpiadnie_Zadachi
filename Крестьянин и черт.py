@@ -1,4 +1,4 @@
-def check(m, k, z):
+def test(m, k, z):
     n_a = 1
     while n_a <= z:
         m = m * 2 - k
